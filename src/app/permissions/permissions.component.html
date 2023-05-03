@@ -1,0 +1,63 @@
+<div class='container-fluid'>
+    <div>
+    <ngb-alert [type]='type' *ngIf="error" (close)="error=false">
+      <strong>Error!</strong>  {{message}}
+    </ngb-alert>
+    </div>
+    <div>
+      <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+        <strong>Success!</strong> {{message1}}
+      </ngb-alert>
+    </div>
+	<div class='container-fluid'>
+	<div class='row'>
+		<div class='col-md-8 offset-md-2'>
+			<div class="card">
+        <h4 class="card-header">Permission </h4>
+        <div class="card-body">
+          <form>
+            <div *ngIf="userData">
+              <table class="table table-striped table-bordered table-sm" *ngIf="userData.data.length else elseBlock">
+                <thead>
+                  <tr>
+                  <!--  <th>#</th>-->
+                    <th>Username</th>
+                    <th>Owner</th>
+                    <th>Manager</th>
+                    <th>Staff</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let dt of userData.data ; index as i">
+                    <th>{{dt.firstname}} {{dt.lastname}}</th>
+                    <th *ngFor="let stat of status">
+                    <input type="radio" id="{{dt._id}}" [(ngModel)]="dt.isAdmin" value="{{stat}}" 
+                    name="option+{{dt._id}}">
+                    </th>
+                    <!--<pre>{{dt | json}}</pre>-->
+                  </tr>
+                  <!--  <tr *ngFor="let dt of users.data ; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{dt.firstname}} {{dt.lastname}}</td>
+                    <td>
+                      
+                      
+                    </td>				   
+                  </tr>-->
+                </tbody>
+              </table>
+            <!--  <pre>{{player | json}}</pre>-->
+              <ng-template #elseBlock> No users found </ng-template>
+              <button [disabled]="loading" class="btn btn-primary" (click)="onSubmit()">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Save
+              </button>
+            </div>
+<!--             {{ getPermissionById(permissionForm.controls.permissionMethod.value) | json }} -->
+          </form>
+
+				</div> 
+			</div>
+		</div>
+	</div> 
+</div>

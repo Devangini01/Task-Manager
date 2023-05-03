@@ -1,0 +1,82 @@
+<div class='container-fluid'>
+  <div>
+    <ngb-alert [type]='type' *ngIf="error" (close)="error=false ">
+      <strong>Error!</strong>  {{message}}
+    </ngb-alert>
+  </div>
+	<div class='row'>
+    <div class='col-xl-4 col-sm-12'>
+      <div class="card">
+        <h4 class="card-header">Add Task Log </h4>
+        <div class="card-body">
+        <form [formGroup]="taskStatusForm">
+          	<div class='form-group'>
+          		<label>Date * </label>
+          		<input type="date" class='form-control' formControlName="date" >
+          	</div>
+            <div class='form-group'>
+              <label>From Time *</label>
+              <ngb-timepicker  [meridian]="meridian" formControlName="fromDateTime"></ngb-timepicker>
+            </div>
+            <div class='form-group'>
+              <label>To Time *</label>
+               <ngb-timepicker  [meridian]="meridian" formControlName="toDateTime"></ngb-timepicker>
+            </div>
+            <div class="form-group" *ngIf="taskList">
+                <label for="username">Existing Task</label>
+                <select class="form-control" placeholder="Select Name" formControlName="taskSet" >
+                  <option value="">Select Existing task</option>
+                  <option *ngFor="let dt of taskList.data" value="{{dt.task}}">{{dt.task}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="username">Or New Task</label>
+                <input type="text" class="form-control" formControlName="task" />
+            </div>
+            <button [disabled]="loading" class="btn btn-primary" (click)="onSubmit()">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Save
+            </button>
+            <div class="mt-2">
+              <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+                <strong>Success!</strong> {{message1}}
+              </ngb-alert>
+            </div>
+          </form>
+        </div>
+    	</div> <!-- card -->
+		</div> <!-- col -->
+		<div class='col-xl-8 col-sm-12'>
+			<div class='card'>
+				<h4 class='card-header'>Task to be performed</h4>
+				<div class='card-body'>
+          <div *ngIf="taskData">
+            <table class='table table-bordered table-sm table-striped' *ngIf="taskData.data.length else elseBlock">
+              <tr>
+                <th>#</th>
+                <th>Task </th>
+                <th>Date</th>
+                <th>From Time</th>
+                <th>To Time</th>
+                <th>Time Taken</th>
+                <th>Action</th>
+              </tr>
+              <tbody>
+                <tr *ngFor="let dt of taskData.data ;  index as i" >
+                  <td>{{i+1}}</td>
+                  <td><p class='text-capitalize'>{{dt.task}}</p></td>
+                  <td><span>{{dt.fromDateTime | date: 'dd-MMM-yy': 'UTC' }}</span></td>
+                  <td>{{dt.fromDateTime | date: 'shortTime' : "UTC"}} </td>
+                  <td>{{dt.toDateTime | date: 'shortTime': "UTC"}} </td>
+                  <td><span > {{( dt.time/60 ) | number : '1.0-0' }} hour <span *ngIf="dt.time%60 !=0"> {{dt.time%60}} mins </span></span> </td>
+                  <td class='text-center'><button class="btn btn-primary btn-sm" (click)="delete(dt._id)"> Complete </button> </td>
+                </tr>
+              </tbody>
+            </table>
+            <ng-template #elseBlock> No pending task </ng-template>
+          </div>
+				</div>
+			</div>
+    </div>
+	</div>
+</div>

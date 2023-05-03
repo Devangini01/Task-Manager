@@ -1,0 +1,73 @@
+
+<div class='container-fluid'>
+	<div class='row'>
+		<div class='col-md-6 col-sm-12'>
+        <h4 >Pending Tasks </h4>
+          <form  [formGroup]="dashForm">
+            <div class="form-group">
+              <input type='hidden' formControlName="editId">
+            </div>
+          </form>
+        <div *ngIf="TransactionData">
+          <div *ngIf="TransactionData.data.length else elseBlock">
+            <ul class="list-unstyled mb-1" *ngFor="let dt of TransactionData.data ;  index as i" >
+              <li class='media border'>
+                <div class='align-self-center'>
+                  <img src="assets/img/money.svg" class='clsIcon' *ngIf="dt.paymentType == 'payment'">
+                  <img src="assets/img/receipt.svg" class='clsIcon align-self-center' *ngIf="dt.paymentType == 'receipt'">
+                  <div class='text-center clsTransaction'>{{dt.paymentType}}</div>
+                </div>
+                <div class='media-body p-2'>
+                  <div class='d-flex flex-row justify-content-between'>
+                    <div>
+                      <h5 class="card-title flex-fill flex-grow-1" ><span *ngIf="dt.account"> 
+                      {{i+1}}. {{dt.account.name}}</span> <span *ngIf="dt.name">{{dt.name}}</span> 
+                      <span  class="text-muted clsSubHeading" ><i>By {{dt.transactionBy.firstname}} </i></span>
+                      </h5>
+                      <div>{{dt.narration}}</div>
+                      
+                    </div>
+                    <h3 class='flex-shrink-1 minWidth'> &#8377; {{dt.amount}} </h3>
+                  </div>
+                  
+                  <div class='text-right mt-2'>
+
+                    <span class='text-muted' (click)="delete(dt._id)"> <fa-icon [icon]="trashIcon" ></fa-icon> Discard </span> 
+                    <button class="btn btn-primary btn-sm ml-1" (click)="onApprove(dt._id)"> <fa-icon [icon]="approveIcon" > </fa-icon> Approve </button>
+                  </div>
+                </div> <!-- media-body -->
+              </li>
+            </ul>
+          </div>
+          <ng-template #elseBlock> No pending task </ng-template>
+
+				</div>
+		</div>
+    <div class='col-md-6 col-sm-12'>
+      <div >
+        <h4>Today's log hours by staff</h4>
+        <div id="chart1" echarts [options]="options" theme="macarons" class="demo-chart"></div>
+      </div>
+      
+      <h4>Today's Task logged</h4>
+      <div *ngIf="taskData">
+        <div *ngIf="taskData.data.length else elseBlock1 ">
+          <ul class='list-unstyled' *ngFor="let dt of taskData.data ;  index as i">
+            <li class='media border p-2 mb-2' > 
+              <img src="assets/img/to-do-list.svg" class='clsTaskIcon'>
+              <div class='media-body'>
+                <div><b>{{dt.task}}</b>
+                  <span class='text-muted'> in {{( dt.time/60 ) | number : '1.0-0' }} hour <span *ngIf="dt.time%60 !=0"> {{dt.time%60}} mins </span> 
+                  </span>
+                </div>
+                <span class="text-muted clsSubHeading" >--{{dt.taskBy.firstname}}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+         <ng-template #elseBlock1> No tasks found </ng-template>
+      </div>
+    </div>
+	</div>
+</div>
+

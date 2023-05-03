@@ -1,0 +1,949 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"col",
+				"col-md-4"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"forg",
+				"ForgotComponent\talias"
+			],
+			[
+				"led",
+				"LedgerComponent\talias"
+			],
+			[
+				"Tas",
+				"TaskStatusComponent\talias"
+			],
+			[
+				"tas",
+				"task-status"
+			],
+			[
+				"Permi",
+				"PermissionsComponent\talias"
+			],
+			[
+				"Payment",
+				"PaymentComponent\talias"
+			],
+			[
+				"emp",
+				"EmployeeComponent\talias"
+			],
+			[
+				"username",
+				"user_name"
+			],
+			[
+				"user",
+				"user_name"
+			],
+			[
+				"ro",
+				"router"
+			],
+			[
+				"Form",
+				"FormGroup\talias"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "accounts.sublime-workspace",
+			"settings":
+			{
+				"buffer_size": 20678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 3444,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.html",
+			"settings":
+			{
+				"buffer_size": 843,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 1244 files for \"user_name\"\n\n\n\nSearching 1242 files for \"user_name\"\n\n/Projects/accounts/src/app/_models/user.ts:\n    2      id: string;\n    3      username: string;\n    4:    // user_name: string ;\n    5      password?: string;\n    6      firstname: string;\n\n/Projects/accounts/src/app/_services/authentication.service.ts:\n   95                          //logout_token: user.logout_token ,\n   96                          //profileUrl: user.current_user.profileUrl,\n   97:                         authdata: window.btoa(user.data.user_name + ':' + password)\n   98                      };\n   99  \n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 629,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/app/_models/user.ts",
+			"settings":
+			{
+				"buffer_size": 400,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "libs/models/schemas.js",
+			"settings":
+			{
+				"buffer_size": 2375,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/app.component.html",
+			"settings":
+			{
+				"buffer_size": 3129,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/app-routing.module.ts",
+			"settings":
+			{
+				"buffer_size": 2554,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/login/login.component.ts",
+			"settings":
+			{
+				"buffer_size": 2282,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".git/config",
+			"settings":
+			{
+				"buffer_size": 342,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/dashboard/dashboard.component.html",
+			"settings":
+			{
+				"buffer_size": 1616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tsconfig.json",
+			"settings":
+			{
+				"buffer_size": 781,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 2275,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/_services/authentication.service.ts",
+			"settings":
+			{
+				"buffer_size": 6133,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"scss",
+				"Set Syntax: CSS"
+			],
+			[
+				"typescript",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"pci",
+				"Plugin Development: Convert Syntax to .sublime-syntax"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Projects/accounts",
+		"/Projects/accounts/libs",
+		"/Projects/accounts/libs/models",
+		"/Projects/accounts/src",
+		"/Projects/accounts/src/app",
+		"/Projects/accounts/src/app/login",
+		"/Projects/accounts/src/app/registration",
+		"/Projects/accounts/src/environments"
+	],
+	"file_history":
+	[
+		"/Projects/intranet/Extra/Passwords.txt",
+		"/Projects/accounts/src/index.html",
+		"/Projects/accounts/src/app/app-routing.module.ts",
+		"/Projects/accounts/src/app/login/login.component.html",
+		"/Projects/accounts/angular.json",
+		"/Projects/accounts/libs/users.js",
+		"/Projects/accounts/src/environments/environment.prod.ts",
+		"/Projects/members-rs/lib/settings.js",
+		"/Projects/members-rs/data.js",
+		"/Projects/members-rs/server.js",
+		"/Projects/members-rs/config.js",
+		"/Projects/accounts/.git/config",
+		"/Projects/accounts/Procfile",
+		"/Projects/accounts/package.json",
+		"/Projects/accounts/accounts.sublime-project",
+		"/Projects/accounts/server.js",
+		"/Projects/accounts/.gitignore",
+		"/Projects/members-rs/.gitignore",
+		"/Projects/accounts/accounts/libs/transaction.js",
+		"/Projects/accounts/accounts/src/app/ledger/ledger.component.html",
+		"/Projects/accounts/accounts/src/app/ledger/ledger.component.ts",
+		"/Projects/accounts/accounts/src/app/dashboard/dashboard.component.ts",
+		"/Projects/accounts/accounts/src/app/app.component.html",
+		"/Projects/accounts/accounts/Procfile",
+		"/Projects/accounts/accounts/src/app/dashboard/dashboard.component.html",
+		"/Projects/accounts/accounts/libs/ledger.js",
+		"/Projects/accounts/accounts/libs/employee.js",
+		"/Projects/accounts/accounts/src/app/party/party.component.ts",
+		"/Projects/accounts/accounts/libs/accounts.js",
+		"/Projects/accounts/accounts/libs/attendance.js",
+		"/Projects/accounts/accounts/libs/payment.js",
+		"/Projects/accounts/accounts/libs/permissions.js",
+		"/Projects/accounts/accounts/libs/receipts.js",
+		"/Projects/accounts/accounts/libs/tasks.js",
+		"/Projects/accounts/accounts/src/app/app.module.ts",
+		"/Projects/accounts/accounts/src/app/app.component.ts",
+		"/Projects/accounts/accounts/src/app/login/login.component.html",
+		"/Projects/accounts/accounts/src/app/login/login.component.ts",
+		"/Projects/accounts/accounts/src/app/task-status/task-status.component.ts",
+		"/Projects/accounts/accounts/server.js",
+		"/Projects/accounts/accounts/libs/models/users-model.js",
+		"/Projects/accounts/accounts/src/app/app-routing.module.ts",
+		"/Projects/accounts/accounts/src/app/permissions/permissions.component.html",
+		"/Projects/accounts/accounts/libs/users.js",
+		"/Projects/accounts/accounts/src/app/party/party.component.html",
+		"/Projects/accounts/accounts/src/app/payment/payment.component.html",
+		"/Projects/accounts/accounts/src/app/payment/payment.component.ts",
+		"/Projects/accounts/accounts/src/app/receipts/receipts.component.ts",
+		"/Projects/accounts/accounts/src/app/task/task.component.ts",
+		"/Projects/accounts/accounts/src/app/task/task.component.html",
+		"/Projects/accounts/accounts/src/app/employee/employee.component.html",
+		"/Projects/accounts/accounts/src/app/receipts/receipts.component.html",
+		"/Projects/accounts/accounts/src/app/employee/employee.component.ts",
+		"/Projects/accounts/accounts/libs/models/schemas.js",
+		"/Projects/accounts/accounts/src/app/task-status/task-status.component.html",
+		"/Projects/accounts/accounts/src/app/attendance/attendance.component.html",
+		"/Projects/accounts/accounts/src/app/forgot/forgot.component.html",
+		"/Projects/accounts/accounts/src/app/forgot/forgot.component.ts",
+		"/Projects/accounts/accounts/src/app/attendance/attendance.component.ts",
+		"/Projects/accounts/accounts/src/app/permissions/permissions.component.ts",
+		"/Projects/accounts/accounts/src/app/_services/index.ts",
+		"/Projects/accounts/accounts/src/main.ts",
+		"/Projects/accounts/accounts/src/app/_services/authentication.service.ts",
+		"/Projects/accounts/accounts/src/app/_services/api.service.ts",
+		"/Projects/accounts/accounts/src/app/registration/registration.component.ts",
+		"/Projects/accounts/accounts/src/app/registration/registration.component.html",
+		"/Projects/accounts/accounts/src/app/_models/user.ts",
+		"/Projects/accounts/accounts/src/app/_helpers/basic-auth.interceptor.ts",
+		"/Projects/accounts/accounts/src/app/app.component.scss",
+		"/Projects/accounts/accounts/tsconfig.json",
+		"/Projects/accounts/accounts/config.js",
+		"/Projects/accounts/accounts/src/app/_models/role.ts",
+		"/Projects/accounts/accounts/src/app/_models/employee.ts",
+		"/Projects/accounts/accounts/src/app/_models/party.ts",
+		"/Projects/accounts/accounts/src/app/_models/task.ts",
+		"/Projects/accounts/accounts/src/app/_models/index.ts",
+		"/Projects/accounts/accounts/src/environments/environment.ts",
+		"/Projects/accounts/accounts/src/environments/environment.prod.ts",
+		"/Projects/accounts/accounts/src/libs/users.js",
+		"/Projects/accounts/accounts/.gitignore",
+		"/Projects/members-rs/lib/users.js",
+		"/Projects/members-rs/lib/models/user-model.js",
+		"/Projects/members-rs/lib/models/schema.js",
+		"/Projects/accounts/accounts/package.json",
+		"/Projects/messytale-app/qimbu/src/app/registration/registration.page.ts",
+		"/Projects/messytale-app/qimbu/src/app/login/login.page.html",
+		"/Projects/messytale-app/qimbu/src/app/app.component.ts",
+		"/Projects/messytale-app/qimbu/src/environments/environment.ts",
+		"/Projects/messytale-app/qimbu/src/app/explore/explore.component.scss",
+		"/Projects/messytale-app/qimbu/src/app/explore/explore.component.ts",
+		"/Projects/messytale/modules/hotels/hotels.permissions.yml",
+		"/Projects/messytale-app/qimbu/src/app/registration/registration.page.html",
+		"/Projects/messytale-app/qimbu/src/app/login/login.page.ts",
+		"/home/manish/.config/sublime-text-3/Packages/User/TypeScript.sublime-settings",
+		"/home/manish/.config/sublime-text-3/Packages/User/TypeScriptReact.sublime-settings",
+		"/home/manish/.config/sublime-text-3/Packages/TypeScript/TypeScript.sublime-settings",
+		"/home/manish/.config/sublime-text-3/Packages/TypeScript/Preferences.sublime-settings",
+		"/Projects/messytale/sites/default/settings.php",
+		"/Projects/messytale-app/qimbu/src/app/app.module.ts"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"<open folders>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"user_name",
+			"saveUser",
+			"MONGO_URI",
+			"'); ",
+			"CONNECTION_URL"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "accounts.sublime-workspace",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 271.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1670,
+								1670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 629,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										187,
+										196
+									],
+									[
+										537,
+										546
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								192,
+								192
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/app/_models/user.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "libs/models/schemas.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/app/app.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1458,
+								1458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/app/app-routing.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1245,
+								1245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/app/login/login.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1072,
+								1072
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": ".git/config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								289,
+								289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Config.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/app/dashboard/dashboard.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								480,
+								480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "tsconfig.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/app/_services/authentication.service.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3925,
+								3925
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 374.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "accounts.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 300.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

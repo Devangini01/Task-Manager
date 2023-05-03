@@ -1,0 +1,90 @@
+<div class='container-fluid'>
+  <div>
+  <ngb-alert [type]='type' *ngIf="error" (close)="error=false">
+    <strong>Error!</strong>  {{message}}
+  </ngb-alert>
+  </div>
+  <div>
+    <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+      <strong>Success!</strong> {{message1}}
+    </ngb-alert>
+  </div>
+  <form [formGroup]="receiptForm">
+    <div class='row'>
+      <div class='col-xl-6 col-sm-12 mb-2'>
+        <div class="card">
+          <h4 class="card-header">Receipt </h4>
+          <div class="card-body">
+              <div class='form-group'>
+                <label>Date *</label>
+                <input type="date" class='form-control' formControlName="date">
+              </div>
+              <fieldset>
+                <div class="form-group">
+                  <label>Party Name</label>
+                  <div *ngIf="AccountsData">
+                    <select class="form-control" placeholder="Select Name" formControlName="accounts"  >
+                      <option value=""></option>
+                      <option *ngFor="let dt of AccountsData.data" value="{{dt._id}}">{{dt.name}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Or </label>
+                  <input type="text" class="form-control" formControlName="name"  />
+                </div>
+              </fieldset>
+              <div class="form-group">
+                  <label for="username">Narration</label>
+                  <input type="text" class="form-control" formControlName="narration"  />
+              </div>
+              <div class="form-group">
+                <label for="username">Amount *</label>
+                <input type="number" class="form-control" formControlName="amount"  />
+              </div>
+              <div class="form-group">
+               	<input type='hidden' formControlName="editId">
+              </div>
+                <button [disabled]="loading" class="btn btn-primary" (click)="onSubmit()" >
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Save
+                </button>
+          </div>
+        </div> <!-- card -->
+      </div> <!-- col -->
+		<div class='col-xl-6 col-sm-12'>
+        <div class="card">
+          <div formGroupName="denomination">
+            <h4 class="card-header">Denomination </h4>
+            <div class="card-body">
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="2000*" formControlName="rs2000"  />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control"  placeholder="500*" formControlName="rs500" />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="200*" formControlName="rs200" />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control"  placeholder="100*" formControlName="rs100" />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="50*" formControlName="rs50" />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="20*" formControlName="rs20" />
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="10*" formControlName="rs10"/>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Coins*" formControlName="coins" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

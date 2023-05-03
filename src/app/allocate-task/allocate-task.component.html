@@ -1,0 +1,55 @@
+<div class='container-fluid'>
+ <div>
+    <ngb-alert [type]='type' *ngIf="error" (close)="error=false">
+      <strong>Error!</strong>  {{message}}
+    </ngb-alert>
+  </div>
+  <div>
+    <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+      <strong>Success!</strong> {{message1}}
+    </ngb-alert>
+  </div>
+  <div class='row'>
+    <div class='col-xl-4 col-sm-12 mb-2'>
+      <div class="card">
+        <h4 class="card-header">Add Recurring Task </h4>
+        <div class="card-body">
+          <form [formGroup]="addTaskForm">          
+            <div class="form-group">
+              <label for="task">Task</label>
+              <input type="text" class="form-control" formControlName="task" />
+            </div>
+            <button [disabled]="loading" class="btn btn-primary" (click)="onSubmit()">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class='col-xl-8 col-sm-12'>
+			<div class='card'>
+				<h4 class='card-header'>Task Added</h4>
+				<div class='card-body'>
+          <div *ngIf="addTaskData">
+            <table class='table table-bordered table-sm table-striped table-sm' *ngIf="addTaskData.data.length else elseBlock">
+              <tr>
+                <th>#</th>
+                <th>Task</th>
+                <th class='text-right'>Action</th>
+              </tr>
+              <tbody>
+                <tr *ngFor="let dt of addTaskData.data; index as i" >
+                  <td>{{i+1}}</td>
+                  <td class='text-capitalize'>{{dt.task}}</td>
+                  <td class='text-right'><button class="btn btn-danger btn-sm" (click)="delete(dt._id)"> <fa-icon [icon]="trashIcon" ></fa-icon> Delete </button> </td>
+                </tr>
+              </tbody>
+            </table>
+            <ng-template #elseBlock> No pending task </ng-template>
+          </div>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>

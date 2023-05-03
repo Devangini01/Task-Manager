@@ -1,0 +1,131 @@
+<div class='container-fluid'>
+  <div>
+    <ngb-alert [type]='type' *ngIf="error" (close)="error=false ">
+      <strong>Error!</strong>  {{message}}
+    </ngb-alert>
+  </div>
+  <div>
+    <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+      <strong>Success!</strong> {{message1}}
+    </ngb-alert>
+  </div>
+	<div class='row'>
+		<div class='col-xl-3 col-sm-12 mb-2'>
+			<div class="card">
+        <h4 class="card-header">User </h4>
+        <div class="card-body">
+          <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="firstname">First name *</label>
+              <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+              <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstname.errors.required">First name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last name *</label>
+              <input type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+              <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                <div *ngIf="f.lastname.errors.required">Last name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile *</label>
+              <input type="text" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+              <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Address *</label>
+                <input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                  <div *ngIf="f.address.errors.required">Address is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Email *</label>
+              <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="username">Username *</label>
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" #password />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label for="rePassword">Re-Password *</label>
+                    <input type="password" formControlName="rePassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.rePassword.errors }" #repassword />
+                    <div *ngIf="submitted && f.rePassword.errors" class="invalid-feedback">
+                        <div *ngIf="f.rePassword.errors.required">Re-Password is required</div>
+                    </div>
+                    <div *ngIf="submitted && password != repassword " class="invalid-feedback">
+                        <div>Password and repassword should match</div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="username">
+                	<input type='checkbox' formControlName="isActive" [checked]="f.isActive">
+                	isActive
+              	</label>
+            </div>
+            <div class="form-group">
+                	<input type='hidden' formControlName="editId">
+            </div>
+            <div class="d-flex justify-content-between">
+	                <button [disabled]="loading" class="btn btn-primary" >
+	                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+	                    Save
+	                </button>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </div>
+          </form>
+        </div>
+    	</div> <!-- card -->
+		</div> <!-- col -->
+
+		<div class='col-xl-9 col-sm-12'>
+      <div *ngIf="userData">
+        <table class='table table-bordered table-striped table-sm' *ngIf="userData.data.length else elseBlock" >
+
+            <tr>
+              <th>#</th>
+              <th>Name/ Username </th>
+              <!-- <th>Username</th> -->
+              <th>Mobile </th>
+              <th>Email </th>
+              <th>Address </th>
+              <th>isActive </th>
+              <th>Action</th>
+            </tr>
+
+          <tbody>
+            <tr *ngFor="let dt of userData.data ; index as i">
+              <td>{{i+1}}</td>
+              <td>{{dt.firstname}} {{dt.lastname}} <div class='text-muted'>{{dt.username}}</div> </td>
+              <td>{{dt.mobile}}</td>
+              <td><span class='clsOverflow' triggers="mouseenter:mouseleave" data-toggle="popover" placement="top" popoverTitle="Email" ngbPopover="{{dt.email}}">{{dt.email}}</span></td>
+              <td>{{dt.address}}</td>
+              <td>{{dt.isActive}}</td>
+              <td><button class="btn btn-danger btn-sm " (click)="delete(dt._id)"> <fa-icon [icon]="trashIcon" ></fa-icon> Delete </button> <button class="btn btn-default btn-sm ml-1" (click)="getSingleUser(dt._id)"> <fa-icon [icon]="editIcon" > </fa-icon> Edit </button>
+              <button class="btn btn-default btn-sm ml-1"> <fa-icon [icon]="lockIcon" > </fa-icon> Change pwd </button>
+              </tr>
+          </tbody>
+        </table>
+
+         <ng-template #elseBlock> No users found </ng-template>
+      </div>
+		</div>
+	</div>
+</div>

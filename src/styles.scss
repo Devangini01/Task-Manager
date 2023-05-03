@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;800&family=Roboto+Slab:wght@300;400&display=swap');
+
+.form-group{
+	label{
+		text-transform: uppercase;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 	300;
+		font-size: 0.8rem;
+	}
+}
+.nav-item, .clsClient{
+	font-family: 'Raleway', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Roboto Slab', serif;
+}
+.clsIcon{
+	color:red;
+}

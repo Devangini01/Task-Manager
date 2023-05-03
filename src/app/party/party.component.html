@@ -1,0 +1,81 @@
+<div class='container-fluid'>
+  <div>
+    <ngb-alert [type]='type' *ngIf="error" (close)="error=false">
+      <strong>Error!</strong>  {{message}}
+    </ngb-alert>
+  </div>
+  <div>
+    <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+      <strong>Success!</strong> {{message1}}
+    </ngb-alert>
+  </div>
+	<div class='row'>
+		<div class='col-xl-4 col-sm-12 mb-2'>
+			<div class="card">
+        <h4 class="card-header">Beneficiaries / Accounts </h4>
+        <div class="card-body">
+          <form [formGroup]="partyForm">
+            <div class="form-group">
+              <label for="username">Name *</label>
+              <input type="text" class="form-control" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required"> Name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Contact No </label>
+                <input type="text" class="form-control" formControlName="contact_no" [ngClass]="{ 'is-invalid': submitted && f.contact_no.errors }">
+                 <div *ngIf="submitted && f.contact_no.errors" class="invalid-feedback">
+                        <div *ngIf="f.contact_no.errors.required"> Contact_no is required</div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="username">
+                	<input type='checkbox' formControlName="isActive" [checked]="checked">
+                	isActive
+              	</label>
+            </div>
+             <div class="form-group">
+                	<input type='hidden' formControlName="editId">
+            </div>
+            <button [disabled]="loading" class="btn btn-primary" (click)="onSubmit()" name.value='' >
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Save
+            </button>
+
+          </form>
+        </div>
+    	</div> <!-- card -->
+		</div> <!-- col -->
+		<div class='col-xl-8 col-sm-12'>
+
+      <div *ngIf="AccountsData">
+      <table class='table table-bordered table-striped table-sm' *ngIf="AccountsData" >
+
+          <tr>
+            <th>#</th>
+            <th>Account Name </th>
+            <th>Contact </th>
+            <th>Active </th>
+            <th>Action</th>
+          </tr>
+
+        <tbody>
+         <!--  <tr>
+          	<td colspan="5" class='text-center'>No Record avaialble</td>
+          </tr> -->
+
+          <tr *ngFor="let dt of AccountsData; index as i">
+            <td>{{i}}</td>
+            <td class='text-capitalize clsClient'><a [routerLink]="['/' ,'partyledger',dt._id]">{{dt.name}}</a></td>
+            <td>{{dt.contact_no}}</td>
+            <td>{{dt.isActive}}</td>
+            <td><button class="btn btn-danger btn-sm " [disabled]="loading" (click)="delete(dt._id)"><fa-icon [icon]="trashIcon" ></fa-icon> Delete </button> <button class="btn btn-default btn-sm ml-1" (click)="getSingleAccount(dt._id)"> <fa-icon [icon]="editIcon" > </fa-icon> Edit </button>
+    <!--        <td>Edit/Delete</td>-->
+          <tr>
+        </tbody>
+      </table>
+    </div>
+		</div>
+	</div>
+</div>

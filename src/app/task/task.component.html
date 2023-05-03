@@ -1,0 +1,82 @@
+<div class='container-fluid'>
+ <div>
+    <ngb-alert [type]='type' *ngIf="error" (close)="error=false">
+      <strong>Error!</strong>  {{message}}
+    </ngb-alert>
+  </div>
+  <div>
+    <ngb-alert [type]='type' *ngIf="done" (close)="done=false ">
+      <strong>Success!</strong> {{message1}}
+    </ngb-alert>
+  </div>
+	<div class='row'>
+		<div class='col-md-10 offset-md-1 mt-2' >
+      <div class='card'>
+				<div class='card-header d-flex justify-content-between'>
+          <h4>Tasks List</h4>
+           <a class='btn btn-default' (click)="exportexcel()">
+            Export to excel
+          </a>
+        </div>
+				<div class='card-body'>
+          <div class= ''>
+            <form [formGroup]="tasksForm" class=''>
+              <div class='row d-flex justify-content-between align-items-end'>
+                <div class='col-xl-3 col-sm-12'>
+                 
+                  <select class="form-control" placeholder="Select Name" formControlName="users"  *ngIf="!userData">
+                    <option value="">Select User</option>
+                    <option *ngFor="let dt of userData.data" value="{{dt._id}}">{{dt.firstname}}</option>
+                  </select>
+                </div>
+                <div class='col-xl-3 col-sm-12'>
+                  <div>
+                    <label for="from">  From: </label>
+                    <input type="date" class='form-control bd-highlight' formControlName="fromDate">
+                  </div>
+                </div>
+                <div class='col-xl-3 col-sm-12'>
+                  <div>
+                    <label for="to">  To: </label>
+                    <input type="date" class='form-control bd-highlight ' formControlName="toDate">
+                  </div>
+                </div>
+                <div class='col-xl-3 col-sm-12 mt-2'>
+                  <button class="btn btn-primary ml-2" (click)="getTaskByUser()" name.value='' >
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Get
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <br>
+          <div *ngIf="taskData">
+            <table id="excel-table" class='table table-bordered table-striped table-sm' *ngIf="taskData.data.length else elseBlock ">
+              <tr>
+                <th>#</th>
+                
+                <th>Task </th>
+                <th>Date</th>
+                <th>From Time</th>
+                <th>To Time</th>
+                <th>Time taken</th>
+                <th>Action</th>
+              </tr>
+              <tbody>
+                <tr *ngFor="let dt of taskData.data ;  index as i" >
+                  <td>{{i+1}}</td>
+                 
+                  <td><p class='text-capitalize'>{{dt.task}}</p></td>
+                  <td><span>{{dt.fromDateTime | date: 'dd-MMM-yy': 'UTC' }}</span></td>
+                  <td>{{dt.fromDateTime | date: 'shortTime' : "UTC"}} </td>
+                  <td>{{dt.toDateTime | date: 'shortTime': "UTC"}} </td>
+                  <td><span > {{( dt.time/60 ) | number : '1.0-0' }} hour <span *ngIf="dt.time%60 !=0"> {{dt.time%60}} mins </span></span> </td>
+                  <td class='text-center'><button class="btn btn-primary btn-sm" (click)="delete(dt._id)"> Complete </button> </td>
+                </tr>
+              </tbody>
+            </table>
+           <ng-template #elseBlock> No tasks found </ng-template>
+		</div>
+	</div>
+</div>
