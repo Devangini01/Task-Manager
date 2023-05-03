@@ -21,35 +21,7 @@ let allSchema = {
     isActive: Boolean,
   },
 
-  AccountSchema : {
-   name:{ type: String, required: [true, 'account name required']},
-   contact_no: {type: String},
-   isActive:{ type: Boolean, default: true } ,
-  },
-
-  TransactionSchema : {
-    transactionBy:{ type: Schema.Types.ObjectId, ref: 'users' , required: [true, 'transaction by required']},
-    paymentType :{ type: String, enum: ['payment', 'receipt'],
-      required: [true, 'transaction type required']
-    },
-    account : { type: Schema.Types.ObjectId, ref: 'accounts'},
-    date : { type : Date, required: [true, 'transaction date required']},
-    name : { type : String },
-    narration : { type : String },
-    amount : { type : Number , required: [true, 'transaction amount required'] },
-    isApproved : { type : Boolean, default : false },
-    approvedOn : { type : Date },
-    denomination : {
-      rs2000 : { type : Number , default : 0},
-      rs500 : { type : Number , default : 0},
-      rs200 : { type : Number , default : 0},
-      rs100 : { type : Number , default : 0},
-      rs50 : { type : Number , default : 0},
-      rs20 : { type : Number , default : 0},
-      rs10 : { type : Number , default : 0},
-      coins : { type : Number , default : 0},
-    },
-  },
+  
   
   TaskSchema : {
     taskBy:{ type: Schema.Types.ObjectId, ref: 'users' , required: [true, 'task by required']},

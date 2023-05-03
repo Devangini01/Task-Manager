@@ -10,18 +10,18 @@ import { LoginComponent } from './login/login.component';
 import { BasicAuthInterceptor, ErrorInterceptor } from './_helpers';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { PartyComponent } from './party/party.component';
+// import { EmployeeComponent } from './employee/employee.component';
+// import { PartyComponent } from './party/party.component';
 import { TaskComponent } from './task/task.component';
 import { TaskStatusComponent } from './task-status/task-status.component';
-import { PaymentComponent } from './payment/payment.component';
-import { ReceiptsComponent } from './receipts/receipts.component';
+// import { PaymentComponent } from './payment/payment.component';
+// import { ReceiptsComponent } from './receipts/receipts.component';
 import { PermissionsComponent } from './permissions/permissions.component';
-import { AttendanceComponent } from './attendance/attendance.component';
-import { LedgerComponent } from './ledger/ledger.component';
-import { ForgotComponent } from './forgot/forgot.component';
+// import { AttendanceComponent } from './attendance/attendance.component';
+// import { LedgerComponent } from './ledger/ledger.component';
+// import { ForgotComponent } from './forgot/forgot.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { PartyledgerComponent } from './partyledger/partyledger.component';
+// import { PartyledgerComponent } from './partyledger/partyledger.component';
 import { AllocateTaskComponent } from './allocate-task/allocate-task.component';
 
 import * as echarts from 'echarts';
@@ -35,17 +35,12 @@ import { ExpenseTrackerComponent } from './expense-tracker/expense-tracker.compo
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
-    EmployeeComponent,
-    PartyComponent,
+   
     TaskComponent,
     TaskStatusComponent,
-    PaymentComponent,
-    ReceiptsComponent,
+   
     PermissionsComponent,
-    AttendanceComponent,
-    LedgerComponent,
-    ForgotComponent,
-    PartyledgerComponent,
+   
     AllocateTaskComponent,
     ExpenseTrackerComponent,
 //     TimeAgoPipe,
